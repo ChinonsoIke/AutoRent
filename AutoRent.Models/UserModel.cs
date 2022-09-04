@@ -26,8 +26,8 @@ namespace AutoRent.Models
         public bool CheckNextofKin { get; set; }
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public DateTime Created_at { get; set; }
+        public DateTime CreatedAt { get; set; }
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-        public DateTime Updated_at { get; set; }
+        public DateTime UpdatedAt { get; set; }
     }
 }
