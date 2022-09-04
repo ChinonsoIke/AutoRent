@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AutoRent.Models
@@ -17,6 +18,6 @@ namespace AutoRent.Models
 
         public string StateId { get; set; }
         public State State { get; set; }
-        // add List<Car> when car model added
+        public List<Car> Cars { get; set; }
     }
 }
