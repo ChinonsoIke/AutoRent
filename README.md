@@ -12,7 +12,7 @@ Car Rental site https://www.figma.com/file/4ptB2W46XlbhnXDGNcQPqm/Car-Renting-De
 
 ### Task requirements :wrench:
 
-:pencil2: The database required for this project is SQL Server.
+:pushpin: The database required for this project is SQL Server.
 
 :pencil2: A Complete ERD of the project, each team should submit their ERD on/before 4pm on Monday 5th, 2022
 
@@ -20,10 +20,10 @@ Car Rental site https://www.figma.com/file/4ptB2W46XlbhnXDGNcQPqm/Car-Renting-De
 
 :pencil2: Apply the code-first migration technique approach
 
-:pencil2: Use EFCore and LINQ to abstract ADO.NET data access
+:pushpin: Use EFCore and LINQ to abstract ADO.NET data access
 
-:pencil2: Work flow should be managed with GitHub /Git
+:pushpin: Work flow should be managed with GitHub /Git
 
-:pencil2: Use Trello Board for Task management
+:pushpin: Use Trello Board for Task management
 
 :pencil2: All functional requirements should be completed.
