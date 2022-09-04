@@ -14,7 +14,7 @@ namespace AutoRent.Models
         public DateTime PickUpDate { get; set; }
         public DateTime ReturnDate { get; set; }
         public decimal PriceTotal { get; set; }
-        public Status BookingStatus { get; set; }
+        public PaymentStatus BookingStatus { get; set; }
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public DateTime CreatedAt { get; set; }
