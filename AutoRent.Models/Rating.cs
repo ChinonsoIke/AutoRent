@@ -19,7 +19,7 @@ namespace AutoRent.Models
 
         public string UserId { get; set; }
         public User User { get; set; }
-        public string Carid { get; set; }
+        public string CarId { get; set; }
         public Car Car { get; set; }
     }
 }

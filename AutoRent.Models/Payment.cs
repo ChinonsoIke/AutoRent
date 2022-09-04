@@ -18,9 +18,9 @@ namespace AutoRent.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime UpdatedAt { get; set; }
 
-        public User UserId { get; set; }
-        // add User prop when user model is created
-        public Booking BookingId { get; set; }
-        // add Booking prop when user model is created
+        public string UserId { get; set; }
+        public User User { get; set; }
+        public string BookingId { get; set; }
+        public Booking Booking { get; set; }
     }
 }

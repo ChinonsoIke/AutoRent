@@ -29,5 +29,9 @@ namespace AutoRent.Models
         public DateTime CreatedAt { get; set; }
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime UpdatedAt { get; set; }
+
+        public List<Booking> Bookings { get; set; }
+        public List<Rating> Ratings { get; set; }
+        public List<Payment> Payments { get; set; }
     }
 }
