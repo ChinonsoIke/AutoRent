@@ -11,23 +11,27 @@ namespace AutoRent.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public string Id { get; set; }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public DateTime PickUpDate { get; set; }
-
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime ReturnDate { get; set; }
-        public string PickUpLocationId { get; set; }
-        public string ReturnLocationId { get; set; }
         public decimal PriceTotal { get; set; }
-        public Status Status { get; set; }
+        public Status BookingStatus { get; set; }
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public DateTime CreatedAt { get; set; }
 
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime UpdatedAt { get; set; }
+
+
+
+        public string PickUpLocationId { get; set; }
+        public Location PickUpLocation { get; set; }
+        public string ReturnLocationId { get; set; }
+        public Location ReturnLocation { get; set; }
         public string CarId { get; set; }
+        // public Car Car { get; set; } When the car model is created
         public string UserId { get; set; }
-        
+        // public User User { get; set; } When the user model is created
+
     }
 }
