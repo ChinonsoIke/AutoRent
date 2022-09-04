@@ -6,7 +6,7 @@ using System.Text;
 
 namespace AutoRent.Models
 {
-    public class UserModel
+    public class User
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -17,13 +17,13 @@ namespace AutoRent.Models
         public string Email { get; set; }
         public string Password { get; set; }
         public string HomeAddress { get; set; }
-        public string NextofKin { get; set; }
-        public string ContactNextofKin { get; set; }
-        public string AddressNextofKin { get; set; }
-        public string DrivingLisenceImage { get; set; }
+        public string NextOfKin { get; set; }
+        public string ContactNextOfKin { get; set; }
+        public string AddressNextOfKin { get; set; }
+        public string DrivingLicenceImage { get; set; }
         public string UserImage { get; set; }
         public bool Verified { get; set; }
-        public bool CheckNextofKin { get; set; }
+        public bool CheckNextOfKin { get; set; }
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public DateTime CreatedAt { get; set; }
