@@ -13,6 +13,5 @@ namespace AutoRent.Dtos
         public string ContactNextOfKin { get; set; }
         public string DrivingLicenceImage { get; set; }
         public string UserImage { get; set; }
-
     }
 }
