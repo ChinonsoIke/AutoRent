@@ -4,7 +4,10 @@ using System.Text;
 
 namespace AutoRent.Models.Enums
 {
-    internal class CarStatus
+    public enum CarStatus
     {
+        Unavailable,
+        Booked,
+        Available
     }
 }
