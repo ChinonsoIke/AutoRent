@@ -6,8 +6,8 @@ namespace AutoRent.Models.Enums
 {
     public enum Status
     {
-        processing,
-        paid, 
-        failed
+        Processing,
+        Paid, 
+        Failed
     }
 }

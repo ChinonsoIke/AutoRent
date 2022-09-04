@@ -6,8 +6,8 @@ namespace AutoRent.Models.Enums
 {
     public enum Option
     {
-        transfer, 
-        paystack, 
-        flw
+        Transfer, 
+        Paystack, 
+        Flw
     }
 }
