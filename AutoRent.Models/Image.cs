@@ -13,7 +13,7 @@ namespace AutoRent.Models
         public DateTime CreatedAt { get; set; }
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime UpdatedAt { get; set; }
-        public string CarId { get; set; }
-        //add car prop when car model is created
+        public Car CarId { get; set; }
+        //update car prop when car model is created
     }
 }
