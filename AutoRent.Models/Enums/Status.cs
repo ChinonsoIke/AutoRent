@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AutoRent.Models.Enums
 {
-    public enum PaymentStatus
+    public enum Status
     {
         Processing,
         Paid, 
