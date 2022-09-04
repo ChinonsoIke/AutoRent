@@ -23,11 +23,15 @@ namespace AutoRent.Models
         public string DrivingLicenceImage { get; set; }
         public string UserImage { get; set; }
         public bool Verified { get; set; }
-        public bool CheckNextOfKin { get; set; }
+        public bool CompletedRegistration { get; set; }
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public DateTime CreatedAt { get; set; }
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime UpdatedAt { get; set; }
+
+        public List<Booking> Bookings { get; set; }
+        public List<Rating> Ratings { get; set; }
+        public List<Payment> Payments { get; set; }
     }
 }

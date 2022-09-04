@@ -23,9 +23,9 @@ namespace AutoRent.Models
 
         public string LocationId { get; set; }
         public Location Location { get; set; }
-        // add List<Booking> when booking model is created
-        // add List<Image> when image model created
-        // add List<Rating> when rating model is created
+        public List<Booking> Bookings { get; set; }
+        public List<Image> Images { get; set; }
+        public List<Rating> Ratings { get; set; }
 
     }
 }
