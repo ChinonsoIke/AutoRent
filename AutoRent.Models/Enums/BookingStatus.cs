@@ -4,10 +4,11 @@ using System.Text;
 
 namespace AutoRent.Models.Enums
 {
-    public enum Status
+    public enum BookingStatus
     {
+        Pending,
         Processing,
-        Paid, 
+        Completed,
         Failed
     }
 }
