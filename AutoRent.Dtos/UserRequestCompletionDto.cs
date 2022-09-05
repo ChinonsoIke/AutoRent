@@ -9,9 +9,9 @@ namespace AutoRent.Dtos
         public string Id { get; set; }
         public string HomeAddress { get; set; }
         public string NextOfKin { get; set; }
-        public string AddressNextOfKin { get; set; }
-        public string ContactNextOfKin { get; set; }
-        public string DrivingLicenceImage { get; set; }
+        public string NextOfKinContact { get; set; }
+        public string NextOfKinAddress { get; set; }
+        public string DriverLicenceImage { get; set; }
         public string UserImageUrl { get; set; }
     }
 }

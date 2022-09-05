@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AutoRent.Models;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -13,5 +14,9 @@ namespace AutoRent.Dtos
         public string PhoneNumber { get; set; }
         public bool CompletedRegistration { get; set; }
         public bool Verified { get; set; }
+
+        public List<BookingResponseDto> Bookings { get; set; }
+        public List<Rating> Ratings { get; set; }
+        //public List<PaymentResponseDto> Payments { get; set; }
     }
 }
