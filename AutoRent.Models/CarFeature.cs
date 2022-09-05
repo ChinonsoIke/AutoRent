@@ -10,6 +10,6 @@ namespace AutoRent.Models
         public Car Car { get; set; }
 
         public string FeatureId { get; set; }
-        public Features Feature { get; set; }
+        public Feature Feature { get; set; }
     }
 }
