@@ -10,10 +10,20 @@ namespace AutoRent.Models
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public string Id { get; set; }
-        public string Name { get; set; }
+        public string DisplayName {
+            get
+            {
+                // edit later tp display short name
+                return $"{Make} {Trim}";
+            }
+        }
         public decimal RentPricePerDay { get; set; }
+        public List<string> Images { get; set; }
         public string PlateNumber { get; set; }
-        public string Mileage { get; set; }
+        public int Mileage { get; set; }
+        public string Make { get; set; }
+        public string Model { get; set; }
+        public string Trim { get; set; }
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public DateTime CreatedAt { get; set; }
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
@@ -24,7 +34,6 @@ namespace AutoRent.Models
         public string LocationId { get; set; }
         public Location Location { get; set; }
         public List<Booking> Bookings { get; set; }
-        public List<Image> Images { get; set; }
         public List<Rating> Ratings { get; set; }
 
     }

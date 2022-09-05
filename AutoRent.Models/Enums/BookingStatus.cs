@@ -9,6 +9,7 @@ namespace AutoRent.Models.Enums
         Pending,
         Processing,
         Completed,
+        Returned,
         Failed
     }
 }
