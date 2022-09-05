@@ -12,7 +12,6 @@ namespace AutoRent.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public string Id { get; set; }
         public decimal Amount { get; set; }
-        public PaymentOption Option;
         public PaymentStatus Status;        
         public DateTime CreatedAt { get; set; }
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]

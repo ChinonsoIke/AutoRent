@@ -22,12 +22,6 @@ namespace AutoRent.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime UpdatedAt { get; set; }
 
-
-
-        public string PickUpLocationId { get; set; }
-        public Location PickUpLocation { get; set; }
-        public string ReturnLocationId { get; set; }
-        public Location ReturnLocation { get; set; }
         public string CarId { get; set; }
         public Car Car { get; set; }
         public string UserId { get; set; }
