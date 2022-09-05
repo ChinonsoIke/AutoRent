@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AutoRent.Models
 {
-    public class Features
+    public class Feature
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
@@ -15,5 +15,7 @@ namespace AutoRent.Models
         public DateTime CreatedAt { get; set; }
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime UpdatedAt { get; set; }
+
+        public List<CarFeature> CarFeatures { get; set; }
     }
 }
