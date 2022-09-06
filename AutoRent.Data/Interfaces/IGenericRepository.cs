@@ -26,7 +26,7 @@ namespace AutoRent.Data.Interfaces
         /// Retrieves all objects of type T from the database context
         /// </summary>
         /// <returns>A list of all objects of type T in the database context</returns>
-        public Task<List<T>> GetAllAsync(Expression<Func<T, bool>> expression, List<string> includes = null);
+        public Task<List<T>> GetAllAsync(Expression<Func<T, bool>> expression = null, List<string> includes = null);
 
         /// <summary>
         /// Updates the value of an object of type T in the database context
