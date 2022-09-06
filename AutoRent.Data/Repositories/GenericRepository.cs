@@ -1,4 +1,5 @@
 ﻿using AutoRent.Data.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
@@ -10,10 +11,12 @@ namespace AutoRent.Data.Repositories
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
         private readonly AutoRentDbContext _dbContext;
+        private readonly DbSet<T> _entitySet;
 
         public GenericRepository(AutoRentDbContext dbContext)
         {
             _dbContext = dbContext;
+            _entitySet = dbContext.Set<T>();
         }
 
         public Task AddAsync(T item)
