@@ -26,6 +26,6 @@ namespace AutoRent.Models
         public Car Car { get; set; }
         public string UserId { get; set; }
         public User User { get; set; }
-
+        public Payment Payment { get; set; }
     }
 }
