@@ -32,9 +32,24 @@ namespace AutoRent.Data.Repositories
             _entitySet.Remove(entity);
         }
 
-        public Task<List<T>> GetAllAsync(Expression<Func<T, bool>> expression, List<string> includes = null)
+        public Task<List<T>> GetAllAsync(Expression<Func<T, bool>> expression = null, List<string> includes = null)
         {
-            throw new NotImplementedException();
+            IQueryable<T> query = _entitySet;
+
+            if (expression != null)
+            {
+                query = query.Where(expression);
+            }
+
+            if (includes != null)
+            {
+                foreach (var include in includes)
+                {
+                    query = query.Include(include);
+                }
+            }
+
+            return _entitySet.AsNoTracking().ToListAsync();
         }
 
         public Task<T> GetAsync(Expression<Func<T, bool>> expression, List<string> includes = null)

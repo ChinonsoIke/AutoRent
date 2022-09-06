@@ -9,6 +9,6 @@ namespace AutoRent.Dtos
     {
         public string Id { get; set; }
         public decimal Amount { get; set; }
-        public PaymentStatus Status { get; set; };
+        public PaymentStatus Status { get; set; }
     }
 }
