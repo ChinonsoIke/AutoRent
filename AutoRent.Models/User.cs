@@ -30,8 +30,8 @@ namespace AutoRent.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime UpdatedAt { get; set; }
 
-        public List<Booking> Bookings { get; set; }
-        public List<Rating> Ratings { get; set; }
-        public List<Payment> Payments { get; set; }
+        public ICollection<Booking> Bookings { get; set; }
+        public ICollection<Rating> Ratings { get; set; }
+        public ICollection<Payment> Payments { get; set; }
     }
 }
