@@ -35,19 +35,89 @@ namespace AutoRent.Data.Repositories
             }
         }
 
-        public IGenericRepository<Car> CarRepository => throw new NotImplementedException();
+        public IGenericRepository<Car> CarRepository
+        {
+            get
+            {
+                if(_carRepository == null)
+                {
+                    _carRepository = new GenericRepository<Car>(_dbContext);
+                }
+                return _carRepository;
+            }
+        } 
 
-        public IGenericRepository<Feature> FeatureRepository => throw new NotImplementedException();
+        public IGenericRepository<Feature> FeatureRepository
+        {
+            get
+            {
+                if(_featureRepository == null)
+                {
+                    _featureRepository = new GenericRepository<Feature>(_dbContext);
+                }
+                return _featureRepository;
+            }
+        } 
 
-        public IGenericRepository<Location> LocationRepository => throw new NotImplementedException();
+        public IGenericRepository<Location> LocationRepository
+        {
+            get
+            {
+                if(_locationRepository == null)
+                {
+                    _locationRepository = new GenericRepository<Location>(_dbContext);
+                }
+                return _locationRepository;
+            }
+        } 
 
-        public IGenericRepository<Payment> PaymentRepository => throw new NotImplementedException();
+        public IGenericRepository<Payment> PaymentRepository
+        {
+            get
+            {
+                if(_paymentRepository == null)
+                {
+                    _paymentRepository = new GenericRepository<Payment>(_dbContext);
+                }
+                return _paymentRepository;
+            }
+        }
 
-        public IGenericRepository<Post> PostRepository => throw new NotImplementedException();
+        public IGenericRepository<Post> PostRepository
+        {
+            get
+            {
+                if(_postRepository == null)
+                {
+                    _postRepository = new GenericRepository<Post>(_dbContext);
+                }
+                return _postRepository;
+            }
+        } 
 
-        public IGenericRepository<Rating> RatingRepository => throw new NotImplementedException();
+        public IGenericRepository<Rating> RatingRepository
+        {
+            get
+            {
+                if(_ratingRepository == null)
+                {
+                    _ratingRepository = new GenericRepository<Rating>(_dbContext);
+                }
+                return _ratingRepository;
+            }
+        } 
 
-        public IGenericRepository<User> UserRepository => throw new NotImplementedException();
+        public IGenericRepository<User> UserRepository
+        {
+            get
+            {
+                if(_userRepository == null)
+                {
+                    _userRepository = new GenericRepository<User>(_dbContext);
+                }
+                return _userRepository;
+            }
+        } 
 
         public async Task Save()
         {
