@@ -33,9 +33,9 @@ namespace AutoRent.Models
 
         public string LocationId { get; set; }
         public Location Location { get; set; }
-        public List<Booking> Bookings { get; set; }
-        public List<Rating> Ratings { get; set; }
-        public List<CarFeature> CarFeatures { get; set; }
+        public ICollection<Booking> Bookings { get; set; }
+        public ICollection<Rating> Ratings { get; set; }
+        public ICollection<CarFeature> CarFeatures { get; set; }
 
     }
 }

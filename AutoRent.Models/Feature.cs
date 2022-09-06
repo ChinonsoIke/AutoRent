@@ -16,6 +16,6 @@ namespace AutoRent.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime UpdatedAt { get; set; }
 
-        public List<CarFeature> CarFeatures { get; set; }
+        public ICollection<CarFeature> CarFeatures { get; set; }
     }
 }
