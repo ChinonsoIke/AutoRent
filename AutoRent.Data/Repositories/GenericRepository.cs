@@ -26,9 +26,10 @@ namespace AutoRent.Data.Repositories
            
         }
 
-        public Task DeleteAsync(string id)
+        public async Task DeleteAsync(string id)
         {
-            throw new NotImplementedException();
+            var entity = await _entitySet.FindAsync(id);
+            _entitySet.Remove(entity);
         }
 
         public Task<List<T>> GetAllAsync(Expression<Func<T, bool>> expression, List<string> includes = null)
