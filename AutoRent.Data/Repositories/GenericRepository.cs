@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,7 +37,16 @@ namespace AutoRent.Data.Repositories
 
         public Task<T> GetAsync(Expression<Func<T, bool>> expression, List<string> includes = null)
         {
-            throw new NotImplementedException();
+            IQueryable<T> query = _entitySet;
+            if (includes != null)
+            {
+                foreach (var include in includes)
+                {
+                    query = query.Include(include);
+                }
+            }
+
+            return _entitySet.AsNoTracking().FirstOrDefaultAsync(expression);
         }
 
         public Task UpdateAsync(T item)
