@@ -36,9 +36,18 @@ namespace AutoRent.Data.Repositories
         {
             IQueryable<T> query = _entitySet;
 
-            if (expression != null) query = query.Where(expression);
+            if (expression != null)
+            {
+                query = query.Where(expression);
+            }
 
-            if (includes != null) foreach (var include in includes) query = query.Include(include);
+            if (includes != null)
+            {
+                foreach (var include in includes)
+                {
+                    query = query.Include(include);
+                }
+            }
 
             return _entitySet.AsNoTracking().ToListAsync();
         }
