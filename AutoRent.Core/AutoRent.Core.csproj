@@ -5,14 +5,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\" />
-    <Folder Include="Services\" />
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\AutoRent.Data\AutoRent.Data.csproj" />
     <ProjectReference Include="..\AutoRent.Dtos\AutoRent.Dtos.csproj" />
     <ProjectReference Include="..\AutoRent.Models\AutoRent.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>
