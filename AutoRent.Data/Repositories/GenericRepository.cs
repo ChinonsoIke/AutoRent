@@ -50,9 +50,10 @@ namespace AutoRent.Data.Repositories
             return _entitySet.AsNoTracking().FirstOrDefaultAsync(expression);
         }
 
-        public Task UpdateAsync(T item)
+        public void UpdateAsync(T item)
         {
-            throw new NotImplementedException();
+            _dbContext.Attach(item);
+            _dbContext.Entry(item).State = EntityState.Modified;
         }
     }
 }
