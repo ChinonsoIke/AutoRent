@@ -19,9 +19,10 @@ namespace AutoRent.Data.Repositories
             _entitySet = dbContext.Set<T>();
         }
 
-        public Task AddAsync(T item)
+        public async Task AddAsync(T item)
         {
-            throw new NotImplementedException();
+            await _entitySet.AddAsync(item);
+           
         }
 
         public Task DeleteAsync(string id)
