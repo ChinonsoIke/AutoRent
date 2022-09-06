@@ -33,7 +33,7 @@ namespace AutoRent.Data.Interfaces
         /// </summary>
         /// <param name="item"></param>
         /// <returns></returns>
-        public Task UpdateAsync(T item);
+        public void Update(T item);
 
         /// <summary>
         /// Deletes an object of type T from the database context
