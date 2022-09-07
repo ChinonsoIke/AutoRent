@@ -8,12 +8,10 @@ namespace AutoRent.Models
 {
     public class Car
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public string Id { get; set; }
         public string DisplayName {
             get
             {
-                // edit later tp display short name
                 return $"{Make} {Trim}";
             }
         }
@@ -24,9 +22,7 @@ namespace AutoRent.Models
         public string Make { get; set; }
         public string Model { get; set; }
         public string Trim { get; set; }
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public DateTime CreatedAt { get; set; }
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime UpdatedAt { get; set; }
         public CarStatus Status { get; set; }
 

@@ -4,6 +4,8 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace AutoRent.Data
 {
@@ -25,9 +27,9 @@ namespace AutoRent.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Booking>().Property(p => p.PriceTotal).HasColumnType("decimal(18,4)");
-            modelBuilder.Entity<Car>().Property(p => p.RentPricePerDay).HasColumnType("decimal(18,4)");
-            modelBuilder.Entity<Payment>().Property(p => p.Amount).HasColumnType("decimal(18,4)");
+            modelBuilder.Entity<Booking>().Property(p => p.PriceTotal).HasColumnType("decimal(18,2)");
+            modelBuilder.Entity<Car>().Property(p => p.RentPricePerDay).HasColumnType("decimal(18,2)");
+            modelBuilder.Entity<Payment>().Property(p => p.Amount).HasColumnType("decimal(18,2)");
             modelBuilder.Entity<CarFeature>().HasKey(cf => new { cf.CarId, cf.FeatureId });
             modelBuilder.Entity<Car>().Property(p => p.Images)
                 .HasConversion(

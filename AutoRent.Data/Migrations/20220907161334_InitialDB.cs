@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace AutoRent.Data.Migrations
 {
-    public partial class InitialMigration : Migration
+    public partial class InitialDB : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -11,8 +11,7 @@ namespace AutoRent.Data.Migrations
                 name: "Features",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<string>(nullable: false),
                     Name = table.Column<string>(nullable: true),
                     IconUrl = table.Column<string>(nullable: true),
                     CreatedAt = table.Column<DateTime>(nullable: false),
@@ -86,7 +85,7 @@ namespace AutoRent.Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(nullable: false),
-                    RentPricePerDay = table.Column<decimal>(type: "decimal(18,4)", nullable: false),
+                    RentPricePerDay = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     Images = table.Column<string>(nullable: true),
                     PlateNumber = table.Column<string>(nullable: true),
                     Mileage = table.Column<int>(nullable: false),
@@ -116,7 +115,7 @@ namespace AutoRent.Data.Migrations
                     Id = table.Column<string>(nullable: false),
                     PickUpDate = table.Column<DateTime>(nullable: false),
                     ReturnDate = table.Column<DateTime>(nullable: false),
-                    PriceTotal = table.Column<decimal>(type: "decimal(18,4)", nullable: false),
+                    PriceTotal = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     BookingStatus = table.Column<int>(nullable: false),
                     CreatedAt = table.Column<DateTime>(nullable: false),
                     UpdatedAt = table.Column<DateTime>(nullable: false),
@@ -145,8 +144,7 @@ namespace AutoRent.Data.Migrations
                 columns: table => new
                 {
                     CarId = table.Column<string>(nullable: false),
-                    FeatureId = table.Column<string>(nullable: false),
-                    FeatureId1 = table.Column<int>(nullable: true)
+                    FeatureId = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -158,11 +156,11 @@ namespace AutoRent.Data.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_CarFeatures_Features_FeatureId1",
-                        column: x => x.FeatureId1,
+                        name: "FK_CarFeatures_Features_FeatureId",
+                        column: x => x.FeatureId,
                         principalTable: "Features",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -200,7 +198,7 @@ namespace AutoRent.Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(nullable: false),
-                    Amount = table.Column<decimal>(type: "decimal(18,4)", nullable: false),
+                    Amount = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     Status = table.Column<int>(nullable: false),
                     CreatedAt = table.Column<DateTime>(nullable: false),
                     UpdatedAt = table.Column<DateTime>(nullable: false),
@@ -235,9 +233,9 @@ namespace AutoRent.Data.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_CarFeatures_FeatureId1",
+                name: "IX_CarFeatures_FeatureId",
                 table: "CarFeatures",
-                column: "FeatureId1");
+                column: "FeatureId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Cars_LocationId",

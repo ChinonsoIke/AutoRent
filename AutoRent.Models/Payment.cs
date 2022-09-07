@@ -9,12 +9,10 @@ namespace AutoRent.Models
 {
     public class Payment
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public string Id { get; set; }
         public decimal Amount { get; set; }
         public PaymentStatus Status { get; set; }        
         public DateTime CreatedAt { get; set; }
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime UpdatedAt { get; set; }
 
         public string UserId { get; set; }
