@@ -8,8 +8,6 @@ namespace AutoRent.Models
 {
     public class User
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public string Id { get; set; }
         public string FirstName { get; set; } 
         public string LastName { get; set; }
@@ -24,10 +22,7 @@ namespace AutoRent.Models
         public string UserImageUrl { get; set; }
         public bool Verified { get; set; }
         public bool CompletedRegistration { get; set; }
-
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public DateTime CreatedAt { get; set; }
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime UpdatedAt { get; set; }
 
         public ICollection<Booking> Bookings { get; set; }

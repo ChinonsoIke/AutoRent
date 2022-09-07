@@ -22,7 +22,6 @@ namespace AutoRent.Data.Migrations
             modelBuilder.Entity("AutoRent.Models.Booking", b =>
                 {
                     b.Property<string>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("BookingStatus")
@@ -32,20 +31,18 @@ namespace AutoRent.Data.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("PickUpDate")
                         .HasColumnType("datetime2");
 
                     b.Property<decimal>("PriceTotal")
-                        .HasColumnType("decimal(18,4)");
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<DateTime>("ReturnDate")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UserId")
@@ -63,11 +60,9 @@ namespace AutoRent.Data.Migrations
             modelBuilder.Entity("AutoRent.Models.Car", b =>
                 {
                     b.Property<string>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Images")
@@ -89,7 +84,7 @@ namespace AutoRent.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("RentPricePerDay")
-                        .HasColumnType("decimal(18,4)");
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
@@ -98,7 +93,6 @@ namespace AutoRent.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -116,25 +110,19 @@ namespace AutoRent.Data.Migrations
                     b.Property<string>("FeatureId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int?>("FeatureId1")
-                        .HasColumnType("int");
-
                     b.HasKey("CarId", "FeatureId");
 
-                    b.HasIndex("FeatureId1");
+                    b.HasIndex("FeatureId");
 
                     b.ToTable("CarFeatures");
                 });
 
             modelBuilder.Entity("AutoRent.Models.Feature", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2");
 
                     b.Property<string>("IconUrl")
@@ -144,7 +132,6 @@ namespace AutoRent.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -155,14 +142,12 @@ namespace AutoRent.Data.Migrations
             modelBuilder.Entity("AutoRent.Models.Location", b =>
                 {
                     b.Property<string>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Area")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2");
 
                     b.Property<string>("PhoneNumber")
@@ -178,7 +163,6 @@ namespace AutoRent.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -189,11 +173,10 @@ namespace AutoRent.Data.Migrations
             modelBuilder.Entity("AutoRent.Models.Payment", b =>
                 {
                     b.Property<string>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<decimal>("Amount")
-                        .HasColumnType("decimal(18,4)");
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("BookingId")
                         .HasColumnType("nvarchar(450)");
@@ -205,7 +188,6 @@ namespace AutoRent.Data.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UserId")
@@ -225,7 +207,6 @@ namespace AutoRent.Data.Migrations
             modelBuilder.Entity("AutoRent.Models.Post", b =>
                 {
                     b.Property<string>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Body")
@@ -245,14 +226,12 @@ namespace AutoRent.Data.Migrations
             modelBuilder.Entity("AutoRent.Models.Rating", b =>
                 {
                     b.Property<string>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("CarId")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Review")
@@ -265,7 +244,6 @@ namespace AutoRent.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UserId")
@@ -283,14 +261,12 @@ namespace AutoRent.Data.Migrations
             modelBuilder.Entity("AutoRent.Models.User", b =>
                 {
                     b.Property<string>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<bool>("CompletedRegistration")
                         .HasColumnType("bit");
 
                     b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2");
 
                     b.Property<string>("DrivingLicenceImage")
@@ -324,7 +300,6 @@ namespace AutoRent.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UserImageUrl")
@@ -366,7 +341,9 @@ namespace AutoRent.Data.Migrations
 
                     b.HasOne("AutoRent.Models.Feature", "Feature")
                         .WithMany("CarFeatures")
-                        .HasForeignKey("FeatureId1");
+                        .HasForeignKey("FeatureId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("AutoRent.Models.Payment", b =>
