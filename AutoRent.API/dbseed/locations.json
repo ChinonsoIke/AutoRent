@@ -1,0 +1,241 @@
+﻿[
+  {
+    "Id": "6ab4d922-a492-48b3-b706-ec30f0a4e601",
+    "StreetNumber": "32",
+    "Street": "Asajon Way",
+    "Area": "Sangotedo",
+    "State": "Lagos",
+    "PhoneNumber": "09053647431",
+    "CreatedAt": "2022-08-20T12:19:25.0299856+01:00",
+    "UpdatedAt": "2022-08-20T12:19:25.0299856+01:00",
+    "Cars": [
+      {
+        "Id": "bb8e6e38-12d1-4130-97e6-abbee700b5e7",
+        "RentPricePerDay": 20000.0,
+        "Images": [
+          "https://res.cloudinary.com/podb/image/upload/v1662502805/AutoRent/FERRARI-FF-00_1_efu4nf.jpg",
+          "https://res.cloudinary.com/podb/image/upload/v1662502805/AutoRent/FF-1_zdsme5.jpg",
+          "https://res.cloudinary.com/podb/image/upload/v1662502804/AutoRent/Ferrari_FF_-_Flickr_-_Alexandre_Pr%C3%A9vot__2_c7xtj5.jpg"
+        ],
+        "PlateNumber": "LAG-1876",
+        "Mileage": 2300,
+        "Make": "Toyota",
+        "Model": "Camry",
+        "Trim": "2022 Camry LE",
+        "CreatedAt": "2022-08-20T12:19:25.0299856+01:00",
+        "UpdatedAt": "2022-08-20T12:19:25.0299856+01:00",
+        "Status": 2,
+        "Bookings": [
+          {
+            "Id": "29b3168a-65cf-43a3-82c1-146a15b263b8",
+            "PickupDate": "2022-10-20T12:19:25.0299856+01:00",
+            "ReturnDate": "2022-12-20T12:19:25.0299856+01:00",
+            "PriceTotal": 60000.0,
+            "BookingStatus": 3,
+            "CreatedAt": "2022-10-20T12:19:25.0299856+01:00",
+            "UpdatedAt": "2022-12-20T12:19:25.0299856+01:00",
+            "UserId": "5dcf4f6a-a6dd-4a2c-b1f3-0177a9d0ef41",
+            "Payment": {
+              "Id": "bec441d3-b900-421c-a891-da2f792bcdb3",
+              "Amount": 60000.0,
+              "Status": 1,
+              "CreatedAt": "2022-10-20T12:19:25.0299856+01:00",
+              "UpdatedAt": "2022-10-20T12:20:25.0299856+01:00",
+              "UserId": "5dcf4f6a-a6dd-4a2c-b1f3-0177a9d0ef41"
+            }
+          },
+          {
+            "Id": "1f9accbb-0362-4a05-93a1-a131de14eae3",
+            "PickupDate": "2022-13-20T12:19:25.0299856+01:00",
+            "ReturnDate": "2022-14-20T12:19:25.0299856+01:00",
+            "PriceTotal": 20000.0,
+            "BookingStatus": 3,
+            "CreatedAt": "2022-13-20T12:19:25.0299856+01:00",
+            "UpdatedAt": "2022-14-20T12:19:25.0299856+01:00",
+            "UserId": "77649e72-f12b-43c6-866d-ac8be695c1a8",
+            "Payment": {
+              "Id": "6bee6c20-babd-4789-882e-f1aac3a8bc8f",
+              "Amount": 20000.0,
+              "Status": 1,
+              "CreatedAt": "2022-13-20T12:19:25.0299856+01:00",
+              "UpdatedAt": "2022-13-20T12:20:25.0299856+01:00",
+              "UserId": "77649e72-f12b-43c6-866d-ac8be695c1a8"
+            }
+          }
+        ],
+        "Ratings": [
+          {
+            "Id": "a84750e4-b925-4b2b-9900-22fff0ef288b",
+            "Title": "Very Good Experience",
+            "Stars": 4,
+            "Review": "I enjoyed using the car",
+            "CreatedAt": "2022-14-20T12:19:25.0299856+01:00",
+            "UpdatedAt": "2022-14-20T12:19:25.0299856+01:00",
+            "UserId": "77649e72-f12b-43c6-866d-ac8be695c1a8"
+          },
+          {
+            "Id": "db1e2f4c-3ce7-4ce5-9a01-765249cf4cec",
+            "Title": "",
+            "Stars": 3,
+            "Review": "",
+            "CreatedAt": "2022-12-20T12:19:25.0299856+01:00",
+            "UpdatedAt": "2022-12-20T12:19:25.0299856+01:00",
+            "UserId": "5dcf4f6a-a6dd-4a2c-b1f3-0177a9d0ef41"
+          }
+        ]
+      },
+      {
+        "Id": "c610723b-da44-413a-806c-fc2e3fe9ff41",
+        "RentPricePerDay": 40000.0,
+        "Images": [
+          "https://res.cloudinary.com/podb/image/upload/v1662502798/AutoRent/24776074705_d54a80f126_b_jpmlty.jpg",
+          "https://res.cloudinary.com/podb/image/upload/v1662502798/AutoRent/46266419171_b8daa53d2f_b_d1ltgc.jpg",
+          "https://res.cloudinary.com/podb/image/upload/v1662502795/AutoRent/images_lasndc.jpg",
+          "https://res.cloudinary.com/podb/image/upload/v1662502793/AutoRent/images_9_pexsa1.jpg"
+        ],
+        "PlateNumber": "LAG-8745",
+        "Mileage": 1200,
+        "Make": "Toyota",
+        "Model": "Camry",
+        "Trim": "2022 Camry XLE ",
+        "CreatedAt": "2022-08-20T12:19:25.0299856+01:00",
+        "UpdatedAt": "2022-08-20T12:19:25.0299856+01:00",
+        "Status": 2,
+        "Bookings": [
+          {
+            "Id": "98acf367-f00f-4800-b4ed-afc4b2a808e4",
+            "PickupDate": "2022-10-20T12:19:25.0299856+01:00",
+            "ReturnDate": "2022-12-20T12:19:25.0299856+01:00",
+            "PriceTotal": 80000.0,
+            "BookingStatus": 3,
+            "CreatedAt": "2022-10-20T12:19:25.0299856+01:00",
+            "UpdatedAt": "2022-12-20T12:19:25.0299856+01:00",
+            "UserId": "d7666c14-1876-462f-ba7a-42f26b6bcf59",
+            "Payment": {
+              "Id": "4bad6521-d979-4d51-b4cf-10e69eb5b692",
+              "Amount": 80000.0,
+              "Status": 1,
+              "CreatedAt": "2022-10-20T12:19:25.0299856+01:00",
+              "UpdatedAt": "2022-10-20T12:20:25.0299856+01:00",
+              "UserId": "d7666c14-1876-462f-ba7a-42f26b6bcf59"
+            }
+          },
+          {
+            "Id": "5570bcf2-b04b-489e-bfb5-fa6bfada3728",
+            "PickupDate": "2022-13-20T12:19:25.0299856+01:00",
+            "ReturnDate": "2022-14-20T12:19:25.0299856+01:00",
+            "PriceTotal": 40000.0,
+            "BookingStatus": 3,
+            "CreatedAt": "2022-13-20T12:19:25.0299856+01:00",
+            "UpdatedAt": "2022-14-20T12:19:25.0299856+01:00",
+            "UserId": "77649e72-f12b-43c6-866d-ac8be695c1a8",
+            "Payment": {
+              "Id": "6bee6c20-babd-4789-882e-f1aac3a8bc8f",
+              "Amount": 40000.0,
+              "Status": 1,
+              "CreatedAt": "2022-13-20T12:19:25.0299856+01:00",
+              "UpdatedAt": "2022-13-20T12:20:25.0299856+01:00",
+              "UserId": "77649e72-f12b-43c6-866d-ac8be695c1a8"
+            }
+          }
+        ],
+        "Ratings": [
+          {
+            "Id": "4760a959-8631-4f4e-9570-282a62a1eed1",
+            "Title": "Very Good Experience",
+            "Stars": 4,
+            "Review": "I enjoyed using the car",
+            "CreatedAt": "2022-14-20T12:19:25.0299856+01:00",
+            "UpdatedAt": "2022-14-20T12:19:25.0299856+01:00",
+            "UserId": "77649e72-f12b-43c6-866d-ac8be695c1a8"
+          },
+          {
+            "Id": "8fc9d0f9-5486-4537-92cd-ccf964546f90",
+            "Title": "",
+            "Stars": 3,
+            "Review": "",
+            "CreatedAt": "2022-12-20T12:19:25.0299856+01:00",
+            "UpdatedAt": "2022-12-20T12:19:25.0299856+01:00",
+            "UserId": "d7666c14-1876-462f-ba7a-42f26b6bcf59"
+          }
+        ]
+      },
+      {
+        "Id": "db7a396c-da74-4b50-b869-5bbb2568f078",
+        "RentPricePerDay": 35000.0,
+        "Images": [
+          "https://res.cloudinary.com/podb/image/upload/v1662502793/AutoRent/images_8_ayupb9.jpg",
+          "https://res.cloudinary.com/podb/image/upload/v1662502793/AutoRent/images_7_uvlxp2.jpg",
+          "https://res.cloudinary.com/podb/image/upload/v1662502793/AutoRent/images_6_w59dn0.jpg",
+          "https://res.cloudinary.com/podb/image/upload/v1662502805/AutoRent/hakon-sataoen-qyfco1nfMtg-unsplash_w4kvrv.jpg"
+        ],
+        "PlateNumber": "LAG-5463",
+        "Mileage": 23300,
+        "Make": "Toyota",
+        "Model": "Camry",
+        "Trim": "2009 Camry LE",
+        "CreatedAt": "2022-08-20T12:19:25.0299856+01:00",
+        "UpdatedAt": "2022-08-20T12:19:25.0299856+01:00",
+        "Status": 2,
+        "Bookings": [
+          {
+            "Id": "77577dd9-72ea-478d-8c9d-9e8d90c6f7ef",
+            "PickupDate": "2022-08-18T12:19:25.0299856+01:00",
+            "ReturnDate": "2022-08-20T12:19:25.0299856+01:00",
+            "PriceTotal": 75000.0,
+            "BookingStatus": 3,
+            "CreatedAt": "2022-08-18T12:19:25.0299856+01:00",
+            "UpdatedAt": "2022-08-20T12:19:25.0299856+01:00",
+            "UserId": "5dcf4f6a-a6dd-4a2c-b1f3-0177a9d0ef41",
+            "Payment": {
+              "Id": "bec441d3-b900-421c-a891-da2f792bcdb3",
+              "Amount": 75000.0,
+              "Status": 1,
+              "CreatedAt": "2022-08-18T12:19:25.0299856+01:00",
+              "UpdatedAt": "2022-08-18T12:20:25.0299856+01:00",
+              "UserId": "5dcf4f6a-a6dd-4a2c-b1f3-0177a9d0ef41"
+            }
+          },
+          {
+            "Id": "03220ad5-a9be-4ad7-a218-a8b2759ae84a",
+            "PickupDate": "2022-08-21T12:19:25.0299856+01:00",
+            "ReturnDate": "2022-08-22T12:19:25.0299856+01:00",
+            "PriceTotal": 35000.0,
+            "BookingStatus": 3,
+            "CreatedAt": "2022-08-21T12:19:25.0299856+01:00",
+            "UpdatedAt": "2022-08-22T12:19:25.0299856+01:00",
+            "UserId": "77649e72-f12b-43c6-866d-ac8be695c1a8",
+            "Payment": {
+              "Id": "d51f9dfc-a1a1-4d76-8ce2-08495b800ed3",
+              "Amount": 35000.0,
+              "Status": 1,
+              "CreatedAt": "2022-08-21T12:19:25.0299856+01:00",
+              "UpdatedAt": "2022-08-22T12:20:25.0299856+01:00",
+              "UserId": "77649e72-f12b-43c6-866d-ac8be695c1a8"
+            }
+          }
+        ],
+        "Ratings": [
+          {
+            "Id": "a84750e4-b925-4b2b-9900-22fff0ef288b",
+            "Title": "Terrible Experience",
+            "Stars": 1,
+            "Review": "I almost got killed. How can you rent out such an old car???",
+            "CreatedAt": "2022-08-21T12:19:25.0299856+01:00",
+            "UpdatedAt": "2022-08-21T12:19:25.0299856+01:00",
+            "UserId": "77649e72-f12b-43c6-866d-ac8be695c1a8"
+          },
+          {
+            "Id": "a8c324c6-05aa-40b3-a37b-35a9af45f411",
+            "Title": "Great experience",
+            "Stars": 3,
+            "Review": "The car was in really good condition for a car of 2009.",
+            "CreatedAt": "2022-08-22T12:19:25.0299856+01:00",
+            "UpdatedAt": "2022-08-22T12:19:25.0299856+01:00",
+            "UserId": "5dcf4f6a-a6dd-4a2c-b1f3-0177a9d0ef41"
+          }
+        ]
+      }
+    ]
+  }
+]
