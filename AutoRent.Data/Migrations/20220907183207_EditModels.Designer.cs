@@ -4,14 +4,16 @@ using AutoRent.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AutoRent.Data.Migrations
 {
     [DbContext(typeof(AutoRentDbContext))]
-    partial class AutoRentDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220907183207_EditModels")]
+    partial class EditModels
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -38,7 +40,7 @@ namespace AutoRent.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<decimal>("PriceTotal")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("money");
 
                     b.Property<DateTime>("ReturnDate")
                         .HasColumnType("datetime2");
@@ -91,7 +93,7 @@ namespace AutoRent.Data.Migrations
                         .HasMaxLength(10);
 
                     b.Property<decimal>("RentPricePerDay")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("money");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");

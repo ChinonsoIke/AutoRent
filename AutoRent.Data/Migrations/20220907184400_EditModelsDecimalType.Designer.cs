@@ -4,14 +4,16 @@ using AutoRent.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AutoRent.Data.Migrations
 {
     [DbContext(typeof(AutoRentDbContext))]
-    partial class AutoRentDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220907184400_EditModelsDecimalType")]
+    partial class EditModelsDecimalType
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

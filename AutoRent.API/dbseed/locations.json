@@ -1033,6 +1033,7 @@
             "BookingStatus": 3,
             "CreatedAt": "2006-03-14T15:01:02.4096706+01:00",
             "UpdatedAt": "2007-04-14T15:01:02.4096706+01:00",
+            "UserId": "5dcf4f6a-a6dd-4a2c-b1f3-0177a9d0ef41",
             "Payment": {
               "Id": "44f2979d-98ce-4e93-b739-578b15034bdf",
               "Amount": 56000,
