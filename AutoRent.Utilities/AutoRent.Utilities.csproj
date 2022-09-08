@@ -9,10 +9,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Profiles\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\AutoRent.Dtos\AutoRent.Dtos.csproj" />
     <ProjectReference Include="..\AutoRent.Models\AutoRent.Models.csproj" />
   </ItemGroup>
