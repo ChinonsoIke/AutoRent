@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
@@ -7,15 +8,19 @@ namespace AutoRent.Models
 {
     public class Feature
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        [Key]
+        [Required]
+        public string Id { get; set; }
+        [Required]
+        [StringLength(20)]
         public string Name { get; set; }
+        [Required]
         public string IconUrl { get; set; }
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Required]
         public DateTime CreatedAt { get; set; }
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+        [Required]
         public DateTime UpdatedAt { get; set; }
 
-        public List<CarFeature> CarFeatures { get; set; }
+        public ICollection<CarFeature> CarFeatures { get; set; }
     }
 }
