@@ -6,6 +6,10 @@ using System.Text;
 
 namespace AutoRent.Models
 {
+    /// <summary>
+    /// pivot/joining class for implementing many-to-many relationship
+    /// between Car and Feature
+    /// </summary>
     public class CarFeature
     {
         [Required]
