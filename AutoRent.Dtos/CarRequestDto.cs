@@ -12,5 +12,6 @@ namespace AutoRent.Dtos
         public string Trim { get; set; }
         public string LocationId { get; set; }
         public int Mileage { get; set; }
+        public List<string> Images { get; set; }
     }
 }

@@ -12,28 +12,28 @@ namespace AutoRent.Models
         [Required]
         public string Id { get; set; }
         [Required]
-        [StringLength(15)]
+        [StringLength(30)]
         public string FirstName { get; set; }
         [Required]
-        [StringLength(15)]
+        [StringLength(30)]
         public string LastName { get; set; }
         [Required]
         [StringLength(15)]
         public string PhoneNumber { get; set; }
         [Required]
-        [StringLength(20)]
+        [StringLength(50)]
         public string Email { get; set; }
-        [StringLength(10)]
+        [StringLength(100)]
         [Required]
         public string Password { get; set; }
-        [StringLength(50)]
+        [StringLength(100)]
         [Required]
         public string HomeAddress { get; set; }
-        [StringLength(30)]
-        public string NextOfKin { get; set; }
+        [StringLength(60)]
+        public string NextOfKinName { get; set; }
         [StringLength(15)]
         public string NextOfKinContact { get; set; }
-        [StringLength(50)]
+        [StringLength(100)]
         public string NextOfKinAddress { get; set; }
         public string DrivingLicenceImage { get; set; }
         public string UserImageUrl { get; set; }

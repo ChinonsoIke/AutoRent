@@ -13,6 +13,8 @@ namespace AutoRent.Models
         [StringLength(50)]
         public string Title { get; set; }
         [Required]
+        // check max int attribute
+        //[MaxLength(5)]
         public int Stars { get; set; }
         [Column(TypeName = "ntext")]
         public string Review { get; set; }

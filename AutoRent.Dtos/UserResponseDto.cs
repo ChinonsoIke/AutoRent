@@ -17,6 +17,6 @@ namespace AutoRent.Dtos
 
         public List<BookingResponseDto> Bookings { get; set; }
         public List<Rating> Ratings { get; set; }
-        //public List<PaymentResponseDto> Payments { get; set; }
+        public List<PaymentResponseDto> Payments { get; set; }
     }
 }

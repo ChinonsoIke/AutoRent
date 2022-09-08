@@ -14,11 +14,8 @@ namespace AutoRent.Dtos
         public decimal PriceTotal { get; set; }
         public CarResponseDto Car { get; set; }
         public UserResponseDto User { get; set; }
-        //public PaymentResponseDto PaymentResponseDto { get; set; }
-        //update paymentResponse
+        public PaymentResponseDto PaymentResponseDto { get; set; }
         public BookingStatus Status { get; set; }
         public Rating Rating { get; set; }
-
-
     }
 }
