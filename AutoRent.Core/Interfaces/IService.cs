@@ -38,7 +38,7 @@ namespace AutoRent.Core.Interfaces
         /// <param name="id">ID of ddomain entity object to be retrieved from the database and updated</param>
         /// <param name="item">Data transfer object representing the domain entity</param>
         /// <returns></returns>
-        public bool Update(string Id, TRequestDto item);
+        public void Update(string Id, TRequestDto item);
 
         /// <summary>
         /// Deletes a domain entity object from the database
