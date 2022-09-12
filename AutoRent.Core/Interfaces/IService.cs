@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -22,14 +23,14 @@ namespace AutoRent.Core.Interfaces
         /// </summary>
         /// <param name="id">ID of the object to be retrieved from the database</param>
         /// <returns>A data transfer object representing the domain entity</returns>
-        public Task<TResponseDto> GetAsync(string Id);
+        public Task<TResponseDto> GetAsync(Expression<Func<TRequestDto, bool>> expression, List<string> includes = null);
 
         /// <summary>
         /// Retrieves all objects match TResponseDto from the database and 
         /// converts them to type TResponseDto
         /// </summary>
         /// <returns>A list of objects of type TResponseDto</returns>
-        public Task<List<TResponseDto>> GetAllAsync();
+        public Task<List<TResponseDto>> GetAllAsync(Expression<Func<TRequestDto, bool>> expression = null, List<string> includes = null);
 
         /// <summary>
         /// Converts a data transfer object of type TRequestDto
