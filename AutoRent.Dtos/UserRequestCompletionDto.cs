@@ -6,7 +6,6 @@ namespace AutoRent.Dtos
 {
     public class UserRequestCompletionDto
     {
-        public string Id { get; set; }
         public string HomeAddress { get; set; }
         public string NextOfKinName { get; set; }
         public string NextOfKinContact { get; set; }

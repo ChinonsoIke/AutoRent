@@ -23,7 +23,6 @@ namespace AutoRent.Data.Repositories
         public async Task AddAsync(T item)
         {
             await _entitySet.AddAsync(item);
-           
         }
 
         public async Task DeleteAsync(string id)
@@ -63,11 +62,14 @@ namespace AutoRent.Data.Repositories
                 }
             }
 
-            return _entitySet.AsNoTracking().FirstOrDefaultAsync(expression);
+            return query.AsNoTracking().FirstOrDefaultAsync(expression);
         }
 
         public void Update(T item)
         {
+            // attaches instance to the contex
+            // t, then sets the state
+            // as modified
             _dbContext.Attach(item);
             _dbContext.Entry(item).State = EntityState.Modified;
         }

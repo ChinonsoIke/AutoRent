@@ -28,11 +28,11 @@ namespace AutoRent.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbContext<AutoRentDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            //services.AddDbContext<AutoRentDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, AutoRentDbContext dbContext)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -45,7 +45,7 @@ namespace AutoRent.API
 
             app.UseAuthorization();
 
-            Seeder.SeedDb(dbContext).GetAwaiter().GetResult();
+            //Seeder.SeedDb(dbContext).GetAwaiter().GetResult();
 
             app.UseEndpoints(endpoints =>
             {

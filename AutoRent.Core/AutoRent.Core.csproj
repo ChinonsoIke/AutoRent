@@ -6,16 +6,13 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\AutoRent.Data\AutoRent.Data.csproj" />
     <ProjectReference Include="..\AutoRent.Dtos\AutoRent.Dtos.csproj" />
     <ProjectReference Include="..\AutoRent.Models\AutoRent.Models.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>

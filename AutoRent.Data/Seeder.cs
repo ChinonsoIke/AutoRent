@@ -54,9 +54,9 @@ namespace AutoRent.Data
 
             if (!dbContext.Users.Any())
             {
-                var json = File.ReadAllText(Path.Combine(baseDir, "dbseed/users.json"));
+                string json = File.ReadAllText(Path.Combine(baseDir, "dbseed/users.json"));//C:AutoRent/AutoRent.API/dbseed/users.json
 
-                var users = JsonConvert.DeserializeObject<List<User>>(json);
+                List<User> users = JsonConvert.DeserializeObject<List<User>>(json);
 
                 await dbContext.AddRangeAsync(users);
                 await dbContext.SaveChangesAsync();
