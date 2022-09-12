@@ -6,6 +6,7 @@ using AutoRent.Models;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -72,31 +73,51 @@ namespace AutoRent.Core.Services
                 await _unitOfWork.Save();
                 _logger.LogInformation($"Updated user {id} information successfully");
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                _logger.LogInformation($"Could not update user {id} information: {ex.Message}");
+                throw new Exception("Could not update user information");
             }
         }
 
-        public Task DeleteAsync(string Id)
+        public async Task DeleteAsync(string Id)
+        {
+            try
+            {
+                await _unitOfWork.UserRepository.DeleteAsync(Id);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogInformation($"Could not delete user {Id} from database: {ex.Message}");
+                throw new Exception($"Could not delete user {Id} from database");
+            }
+        }
+
+        public Task<List<UserResponseDto>> GetAllAsync(Expression<Func<UserRequestInitialDto, bool>> expression = null, List<string> includes = null)
         {
             throw new NotImplementedException();
         }
 
-        public Task<List<UserResponseDto>> GetAllAsync()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<UserResponseDto> GetAsync(string Id)
+        public Task<UserResponseDto> GetAsync(Expression<Func<UserRequestInitialDto, bool>> expression, List<string> includes = null)
         {
             throw new NotImplementedException();
         }
 
         public void Update(string Id, UserRequestInitialDto item)
         {
-            throw new NotImplementedException();
+            var user = await _unitOfWork.UserRepository.GetAsync(u => u.Id == id);
+
+            try
+            {
+                _unitOfWork.UserRepository.Update(user);
+                await _unitOfWork.Save();
+                _logger.LogInformation($"Updated user {id} information successfully");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogInformation($"Could not update user {id} information: {ex.Message}");
+                throw new Exception("Could not update user information");
+            }
         }
     }
 }
