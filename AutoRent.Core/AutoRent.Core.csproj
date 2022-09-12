@@ -14,8 +14,4 @@
     <ProjectReference Include="..\AutoRent.Models\AutoRent.Models.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
-
 </Project>
