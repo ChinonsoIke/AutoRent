@@ -28,10 +28,6 @@ namespace AutoRent.Core.Services
         public async Task AddAsync(UserRequestInitialDto userRequestInitialDto)
         {
             var user = _mapper.Map<User>(userRequestInitialDto);
-            user.Verified = false;
-            user.Id = Guid.NewGuid().ToString();
-            user.CreatedAt = DateTime.Now;
-            user.UpdatedAt = DateTime.Now;
 
             if (user == null)
             {
@@ -39,6 +35,10 @@ namespace AutoRent.Core.Services
                 throw new Exception("One or more of your inputs are incorrect");
             }
 
+            user.Verified = false;
+            user.Id = Guid.NewGuid().ToString();
+            user.CreatedAt = DateTime.Now;
+            user.UpdatedAt = DateTime.Now;
             user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password);
 
             try
@@ -55,7 +55,7 @@ namespace AutoRent.Core.Services
             }
         }
 
-        public async void CompleteRegistration(string id, UserRequestCompletionDto userRequestCompletionDto)
+        public async Task CompleteRegistration(string id, UserRequestCompletionDto userRequestCompletionDto)
         {
             var user = await _unitOfWork.UserRepository.GetAsync(u => u.Id == id);
             user.HomeAddress = userRequestCompletionDto.HomeAddress;
@@ -80,32 +80,54 @@ namespace AutoRent.Core.Services
             }
         }
 
-        public async Task DeleteAsync(string Id)
+        public async Task DeleteAsync(string id)
         {
             try
             {
-                await _unitOfWork.UserRepository.DeleteAsync(Id);
+                await _unitOfWork.UserRepository.DeleteAsync(id);
+                await _unitOfWork.Save();
+                _logger.LogInformation($"Successfully deleted user {id} from database");
             }
             catch (Exception ex)
             {
-                _logger.LogInformation($"Could not delete user {Id} from database: {ex.Message}");
-                throw new Exception($"Could not delete user {Id} from database");
+                _logger.LogInformation($"Could not delete user {id} from database: {ex.Message}");
+                throw new Exception($"Could not delete user {id} from database");
             }
         }
 
-        public Task<List<UserResponseDto>> GetAllAsync(Expression<Func<UserRequestInitialDto, bool>> expression = null, List<string> includes = null)
+        public async Task<List<UserResponseDto>> GetAllUsers(string id)
         {
-            throw new NotImplementedException();
+            var users = await _unitOfWork.UserRepository.GetAllAsync();
+            return _mapper.Map<List<UserResponseDto>>(users);
         }
 
-        public Task<UserResponseDto> GetAsync(Expression<Func<UserRequestInitialDto, bool>> expression, List<string> includes = null)
+        public async Task<List<BookingResponseDto>> GetUserBookings(string id)
         {
-            throw new NotImplementedException();
+            var bookings = await _unitOfWork.BookingRepository.GetAllAsync(b => b.UserId == id);
+            return _mapper.Map<List<BookingResponseDto>>(bookings);
         }
 
-        public void Update(string Id, UserRequestInitialDto item)
+        public async Task<UserResponseDto> GetUserByEmail(string email)
+        {
+            var user = await _unitOfWork.UserRepository.GetAsync(u => u.Email == email);
+            return _mapper.Map<UserResponseDto>(user);
+        }
+
+        public async Task<UserResponseDto> GetUserById(string id)
         {
             var user = await _unitOfWork.UserRepository.GetAsync(u => u.Id == id);
+            return _mapper.Map<UserResponseDto>(user);
+        }
+
+        public async Task Update(string id, UserRequestInitialDto userRequestInitialDto)
+        {
+            var user = await _unitOfWork.UserRepository.GetAsync(u => u.Id == id);
+            user.FirstName = userRequestInitialDto.FirstName;
+            user.LastName = userRequestInitialDto.LastName;
+            user.Email = userRequestInitialDto.Email;
+            user.PhoneNumber = userRequestInitialDto.PhoneNumber;
+            user.Password = BCrypt.Net.BCrypt.HashPassword(userRequestInitialDto.Password);
+            user.UpdatedAt = DateTime.Now;
 
             try
             {
