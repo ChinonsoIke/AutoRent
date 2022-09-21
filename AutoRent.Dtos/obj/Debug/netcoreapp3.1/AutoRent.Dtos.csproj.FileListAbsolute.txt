@@ -1,0 +1,13 @@
+C:\Users\hp\Documents\demo\AutoRent\AutoRent.Dtos\obj\Debug\netcoreapp3.1\AutoRent.Dtos.csproj.AssemblyReference.cache
+C:\Users\hp\Documents\demo\AutoRent\AutoRent.Dtos\obj\Debug\netcoreapp3.1\AutoRent.Dtos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Documents\demo\AutoRent\AutoRent.Dtos\obj\Debug\netcoreapp3.1\AutoRent.Dtos.AssemblyInfoInputs.cache
+C:\Users\hp\Documents\demo\AutoRent\AutoRent.Dtos\obj\Debug\netcoreapp3.1\AutoRent.Dtos.AssemblyInfo.cs
+C:\Users\hp\Documents\demo\AutoRent\AutoRent.Dtos\obj\Debug\netcoreapp3.1\AutoRent.Dtos.csproj.CoreCompileInputs.cache
+C:\Users\hp\Documents\demo\AutoRent\AutoRent.Dtos\bin\Debug\netcoreapp3.1\AutoRent.Dtos.deps.json
+C:\Users\hp\Documents\demo\AutoRent\AutoRent.Dtos\bin\Debug\netcoreapp3.1\AutoRent.Dtos.dll
+C:\Users\hp\Documents\demo\AutoRent\AutoRent.Dtos\bin\Debug\netcoreapp3.1\AutoRent.Dtos.pdb
+C:\Users\hp\Documents\demo\AutoRent\AutoRent.Dtos\bin\Debug\netcoreapp3.1\AutoRent.Models.dll
+C:\Users\hp\Documents\demo\AutoRent\AutoRent.Dtos\bin\Debug\netcoreapp3.1\AutoRent.Models.pdb
+C:\Users\hp\Documents\demo\AutoRent\AutoRent.Dtos\obj\Debug\netcoreapp3.1\AutoRent.Dtos.csproj.CopyComplete
+C:\Users\hp\Documents\demo\AutoRent\AutoRent.Dtos\obj\Debug\netcoreapp3.1\AutoRent.Dtos.dll
+C:\Users\hp\Documents\demo\AutoRent\AutoRent.Dtos\obj\Debug\netcoreapp3.1\AutoRent.Dtos.pdb

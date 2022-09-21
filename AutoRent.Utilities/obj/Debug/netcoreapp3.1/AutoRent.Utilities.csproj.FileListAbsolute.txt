@@ -1,0 +1,15 @@
+C:\Users\hp\Documents\demo\AutoRent\AutoRent.Utilities\bin\Debug\netcoreapp3.1\AutoRent.Utilities.deps.json
+C:\Users\hp\Documents\demo\AutoRent\AutoRent.Utilities\bin\Debug\netcoreapp3.1\AutoRent.Utilities.dll
+C:\Users\hp\Documents\demo\AutoRent\AutoRent.Utilities\bin\Debug\netcoreapp3.1\AutoRent.Utilities.pdb
+C:\Users\hp\Documents\demo\AutoRent\AutoRent.Utilities\bin\Debug\netcoreapp3.1\AutoRent.Dtos.dll
+C:\Users\hp\Documents\demo\AutoRent\AutoRent.Utilities\bin\Debug\netcoreapp3.1\AutoRent.Models.dll
+C:\Users\hp\Documents\demo\AutoRent\AutoRent.Utilities\bin\Debug\netcoreapp3.1\AutoRent.Dtos.pdb
+C:\Users\hp\Documents\demo\AutoRent\AutoRent.Utilities\bin\Debug\netcoreapp3.1\AutoRent.Models.pdb
+C:\Users\hp\Documents\demo\AutoRent\AutoRent.Utilities\obj\Debug\netcoreapp3.1\AutoRent.Utilities.csproj.AssemblyReference.cache
+C:\Users\hp\Documents\demo\AutoRent\AutoRent.Utilities\obj\Debug\netcoreapp3.1\AutoRent.Utilities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Documents\demo\AutoRent\AutoRent.Utilities\obj\Debug\netcoreapp3.1\AutoRent.Utilities.AssemblyInfoInputs.cache
+C:\Users\hp\Documents\demo\AutoRent\AutoRent.Utilities\obj\Debug\netcoreapp3.1\AutoRent.Utilities.AssemblyInfo.cs
+C:\Users\hp\Documents\demo\AutoRent\AutoRent.Utilities\obj\Debug\netcoreapp3.1\AutoRent.Utilities.csproj.CoreCompileInputs.cache
+C:\Users\hp\Documents\demo\AutoRent\AutoRent.Utilities\obj\Debug\netcoreapp3.1\AutoRent.Utilities.csproj.CopyComplete
+C:\Users\hp\Documents\demo\AutoRent\AutoRent.Utilities\obj\Debug\netcoreapp3.1\AutoRent.Utilities.dll
+C:\Users\hp\Documents\demo\AutoRent\AutoRent.Utilities\obj\Debug\netcoreapp3.1\AutoRent.Utilities.pdb

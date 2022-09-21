@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "AutoRent.Dtos/1.0.0": {
+        "dependencies": {
+          "AutoRent.Models": "1.0.0"
+        },
+        "runtime": {
+          "AutoRent.Dtos.dll": {}
+        }
+      },
+      "AutoRent.Models/1.0.0": {
+        "runtime": {
+          "AutoRent.Models.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AutoRent.Dtos/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AutoRent.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
